@@ -1,0 +1,235 @@
+header,
+main,
+footer {
+    padding: 2rem 4rem;
+}
+
+header {
+    background-image: url('/assets/images/hero.jpg');
+    backdrop-filter: brightness(-20%);
+    background-size: cover;
+    background-position: bottom;
+    color: var(--color-light-idle);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 80rem;
+
+    text-align: center;
+}
+
+header::before {
+    content: '';
+
+    backdrop-filter: brightness(0.2);
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+header .logo {
+    align-self: flex-start;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+header .hero {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    height: 0;
+}
+
+header .hero h1 {
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+
+header .hero p {
+    color: var(--color-light-hover);
+
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+header .hero a {
+    background: var(--color-primary-idle);
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 3rem;
+    padding: 0.5rem 2rem;
+
+    border-radius: 999rem;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+header .hero a:hover {
+    background: var(--color-primary-hover);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: 4rem;
+}
+
+main h2 {
+    font-size: 2.8rem;
+}
+
+main .filters {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .filters > li {
+    flex: 1;
+
+    filter: grayscale(1);
+
+    position: relative;
+
+    height: 10rem;
+
+    transform: scale(1);
+
+    cursor: pointer;
+
+    transition: transform 0.1s linear, flex 0.2s ease-in-out;
+}
+
+main .filters > li.active,
+main .filters > li:hover {
+    filter: grayscale(0);
+}
+
+main .filters > li.active {
+    flex: 1.5;
+}
+
+main .filters > li:hover {
+    transform: scale(1.02);
+}
+
+main .filters > li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .filters > li .text {
+    color: var(--color-light-idle);
+    text-shadow: 0 0 1rem black;
+    backdrop-filter: brightness(0.6);
+
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+}
+
+main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    gap: 2rem;
+}
+
+main .cards > li {
+    background: var(--color-light-idle);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    display: grid;
+    grid-template-areas: '. info';
+    grid-template-columns: 3fr 7fr;
+
+    transform: scale(1);
+
+    cursor: pointer;
+
+    transition: transform 0.1s linear;
+}
+
+main .cards > li:hover {
+    transform: scale(1.02);
+}
+
+main .cards > li img {
+    filter: saturate(1.2);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+
+    clip-path: polygon(2rem 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+main .cards > li .info {
+    grid-area: info;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    padding: 1rem;
+}
+
+main .cards > li .info .title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+main .cards > li .info .tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .cards > li .info .tags > li {
+    background: var(--color-light-hover);
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 999rem;
+
+    font-size: 1.2rem;
+}
+
+footer {
+    background: var(--color-dark-idle);
+    color: var(--color-light-idle);
+
+    font-size: 1.2rem;
+}

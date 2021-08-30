@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>آشپزباشی!</title>
+
+        <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/index.css" />
+
+        <script src="/scripts/index.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">آشپزباشی!</div>
+            <div class="hero">
+                <h1>نمیدونی چه غذایی درست کنی؟</h1>
+                <p>
+                    ما برای شما مجموعه‌ای از دستور پخت بهترین غذاهای دنیا رو آماده کردیم.
+                    <br />
+                    از غذاهای سنتی ایرانی تا فست فودهای لذیذ و خوشمزه.
+                </p>
+                <a href="#foods"
+                    >لیست غذاها
+                    <svg viewBox="0 0 12 7.4">
+                        <path d="M10.6,0L6,4.6L1.4,0L0,1.4l6,6l6-6L10.6,0z" />
+                    </svg>
+                </a>
+            </div>
+        </header>
+
+        <main id="foods">
+            <h2>لیست غذاها</h2>
+
+            <ul class="filters">
+                <li class="active">
+                    <img src="/assets/images/filters/all.jpg" alt="" />
+                    <div class="text">همه</div>
+                </li>
+                <li>
+                    <img src="/assets/images/filters/iranian.jpg" alt="" />
+                    <div class="text">ایرانی</div>
+                </li>
+                <li>
+                    <img src="/assets/images/filters/soup.jpg" alt="" />
+                    <div class="text">سوپ و آش</div>
+                </li>
+                <li>
+                    <img src="/assets/images/filters/italian.jpg" alt="" />
+                    <div class="text">ایتالیایی</div>
+                </li>
+                <li>
+                    <img src="/assets/images/filters/fast-food.jpg" alt="" />
+                    <div class="text">فست فود</div>
+                </li>
+                <li>
+                    <img src="/assets/images/filters/pizza.jpg" alt="" />
+                    <div class="text">پیتزا</div>
+                </li>
+                <li>
+                    <img src="/assets/images/filters/cake.jpg" alt="" />
+                    <div class="text">کیک و شیرینی</div>
+                </li>
+            </ul>
+
+            <ul class="cards"></ul>
+        </main>
+
+        <footer>تمام حقوق این وبسایت متعلق به آشپزباشی می‌باشد.</footer>
+
+        <template id="recipe-template">
+            <li>
+                <img src="" alt="" />
+                <div class="info">
+                    <div class="title"></div>
+                    <ul class="tags"></ul>
+                </div>
+            </li>
+        </template>
+    </body>
+</html>
