@@ -1,7 +1,7 @@
 const recipeTemplate = document.querySelector('#recipe-template');
 
-const RECIPES_URL = '../data/recipes.json';
-const IMAGES_URL = '../data/images.json';
+const RECIPES_URL = './data/recipes.json';
+const IMAGES_URL = './data/images.json';
 
 const FOOD_IMAGES_FOLDER = './assets/images/foods/';
 
