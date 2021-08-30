@@ -1,12 +1,5 @@
 @font-face {
     font-family: 'Shabnam';
-    src: url('../assets/fonts/shabnam-thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Shabnam';
     src: url('../assets/fonts/shabnam-light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
