@@ -1,0 +1,109 @@
+header {
+    background-position: center;
+
+    min-height: 40rem;
+}
+
+header .hero .times {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+header .hero .times > * {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+header .hero .times > * span {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+header .hero ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 3rem;
+}
+
+header .hero ul li {
+    background: var(--color-light-hover);
+    color: var(--color-dark-idle);
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 999rem;
+
+    font-size: 1.2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+main h2 {
+    background: var(--color-primary-idle);
+    color: var(--color-light-idle);
+
+    font-size: 2.4rem;
+}
+
+main .ingredients,
+main .steps {
+    background: var(--color-light-idle);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+main .ingredients h2,
+main .ingredients ul li,
+main .steps h2,
+main .steps ul li {
+    padding: 2rem;
+}
+
+main .ingredients ul,
+main .steps ul {
+    display: flex;
+    flex-direction: column;
+}
+
+main .ingredients ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .ingredients ul li:hover {
+    background: var(--color-light-hover);
+}
+
+main .ingredients ul li .title {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+main .ingredients ul li .amount {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+main .steps ul li {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+main .steps ul li .index {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+main .steps ul li .text {
+    font-size: 1.6rem;
+    font-weight: 400;
+}

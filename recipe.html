@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>آشپزباشی!</title>
+
+        <link rel="stylesheet" href="./styles/global.css" />
+        <link rel="stylesheet" href="./styles/recipe.css" />
+
+        <script src="./scripts/global.js" defer></script>
+        <script src="./scripts/recipe.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="./index.html">آشپزباشی!</a>
+            <div class="hero">
+                <h1></h1>
+                <div class="times">
+                    <div class="preparation">
+                        زمان تهیه:
+                        <span></span>
+                        دقیقه
+                    </div>
+                    <div class="cook">
+                        زمان طبخ:
+                        <span></span>
+                        دقیقه
+                    </div>
+                </div>
+                <ul></ul>
+            </div>
+        </header>
+
+        <main>
+            <div class="ingredients">
+                <h2>مواد مورد نیاز</h2>
+                <ul></ul>
+            </div>
+
+            <div class="steps">
+                <h2>مراحل طبخ</h2>
+                <ul></ul>
+            </div>
+        </main>
+
+        <footer>تمام حقوق این وبسایت متعلق به آشپزباشی می‌باشد.</footer>
+
+        <template id="ingredient-template">
+            <li>
+                <div class="title"></div>
+                <div class="amount"></div>
+            </li>
+        </template>
+
+        <template id="step-template">
+            <li>
+                <div class="index"></div>
+                <div class="text"></div>
+            </li>
+        </template>
+    </body>
+</html>

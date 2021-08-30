@@ -1,58 +1,8 @@
-header,
-main,
-footer {
-    padding: 2rem 4rem;
-}
-
 header {
     background-image: url('../assets/images/hero.jpg');
-    backdrop-filter: brightness(-20%);
-    background-size: cover;
     background-position: bottom;
-    color: var(--color-light-idle);
-
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
 
     min-height: 80rem;
-
-    text-align: center;
-}
-
-header::before {
-    content: '';
-
-    backdrop-filter: brightness(0.2);
-
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-}
-
-header .logo {
-    align-self: flex-start;
-
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-header .hero {
-    flex: 1;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
-    height: 0;
-}
-
-header .hero h1 {
-    font-size: 4.8rem;
-    font-weight: 700;
 }
 
 header .hero p {
@@ -86,8 +36,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
-    padding: 4rem;
 }
 
 main h2 {
@@ -223,13 +171,6 @@ main .cards > li .info .tags > li {
     padding: 0.5rem 1rem;
 
     border-radius: 999rem;
-
-    font-size: 1.2rem;
-}
-
-footer {
-    background: var(--color-dark-idle);
-    color: var(--color-light-idle);
 
     font-size: 1.2rem;
 }

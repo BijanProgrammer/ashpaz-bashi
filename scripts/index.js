@@ -1,26 +1,16 @@
-const recipeTemplate = document.querySelector('#recipe-template');
-
-const RECIPES_URL = './data/recipes.json';
-const IMAGES_URL = './data/images.json';
-
-const FOOD_IMAGES_FOLDER = './assets/images/foods/';
-
-let allRecipes;
-
-const fetchData = async () => {
-    const recipes = await (await fetch(RECIPES_URL)).json();
-    const images = await (await fetch(IMAGES_URL)).json();
-
-    allRecipes = recipes.map((recipe, index) => ({...recipe, image: images[index]}));
-    allRecipes = allRecipes.sort((a, b) => a.title.localeCompare(b.title));
-};
+const RECIPE_TEMPLATE = document.querySelector('#recipe-template');
 
 const setupRecipes = async (recipes) => {
     const cards = document.querySelector('main .cards');
     cards.innerHTML = '';
 
     for (const recipe of recipes) {
-        const recipeElement = recipeTemplate.content.cloneNode(true);
+        const recipeElement = RECIPE_TEMPLATE.content.cloneNode(true);
+
+        const itemElement = recipeElement.querySelector('li');
+        itemElement.addEventListener('click', () => {
+            window.location = `./recipe.html?index=${recipe.index}`;
+        });
 
         const imageElement = recipeElement.querySelector('img');
         imageElement.src = FOOD_IMAGES_FOLDER + recipe.image;
@@ -65,6 +55,8 @@ const setupFilterFunctionality = async () => {
 
 const main = async () => {
     await fetchData();
+    allRecipes = allRecipes.sort((a, b) => a.title.localeCompare(b.title));
+
     await setupRecipes(allRecipes);
     await setupFilterFunctionality();
 };
