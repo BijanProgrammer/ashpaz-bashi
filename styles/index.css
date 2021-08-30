@@ -5,7 +5,7 @@ footer {
 }
 
 header {
-    background-image: url('/assets/images/hero.jpg');
+    background-image: url('./assets/images/hero.jpg');
     backdrop-filter: brightness(-20%);
     background-size: cover;
     background-position: bottom;

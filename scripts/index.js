@@ -1,9 +1,9 @@
 const recipeTemplate = document.querySelector('#recipe-template');
-console.log(recipeTemplate);
 
-const RECIPES_URL = '/data/recipes.json';
-const IMAGES_URL = '/data/images.json';
-const FOOD_IMAGES_FOLDER = '/assets/images/foods/';
+const RECIPES_URL = '../data/recipes.json';
+const IMAGES_URL = '../data/images.json';
+
+const FOOD_IMAGES_FOLDER = './assets/images/foods/';
 
 let allRecipes;
 
@@ -66,7 +66,7 @@ const setupFilterFunctionality = async () => {
 const main = async () => {
     await fetchData();
     await setupRecipes(allRecipes);
-    setupFilterFunctionality();
+    await setupFilterFunctionality();
 };
 
 main().then();
